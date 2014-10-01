@@ -9,12 +9,12 @@ class TestFizzBuzz(unittest.TestCase):
 	def test_15_donne_buzz(self):
 		self.assertEqual("FizzBuzz", fizz_buzz(15))
 def fizz_buzz(chiffre):
-	if chiffre == 3:
-		return "Fizz"
-	elif chiffre == 5:
-		return "Buzz"
-	elif chiffre == 15:
+	if chiffre % 15 == 0:
 		return "FizzBuzz"
+	elif chiffre % 3 == 0:
+		return "Fizz"
+	elif chiffre % 5 == 0:
+		return "Buzz"
 
 if __name__ == '__main__':
 	unittest.main()
